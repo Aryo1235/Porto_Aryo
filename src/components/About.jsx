@@ -1,7 +1,7 @@
 // src/components/About.jsx
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import profileImg from '../assets/about_us.jpg';
+import profileImg from '/about_us.jpg';
 
 export default function About() {
   const ref = useRef(null);
@@ -18,7 +18,7 @@ export default function About() {
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
         transition={{ duration: 0.6 }}
       >
-        <h3 className="text-3xl font-semibold mb-4 text-sky-600 dark:text-sky-400">About Me</h3>
+        <h3 className="text-3xl font-bold mb-4 text-sky-600 dark:text-sky-400">About Me</h3>
         <p className="text-gray-700 dark:text-gray-300 text-lg">
           I am a frontend developer with a passion for building user-friendly and responsive web applications. I enjoy working with modern technologies and continuously learning new skills Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga similique minus perferendis voluptatibus, aliquam laudantium eum velit magnam! Quae, dicta?.
         </p>
