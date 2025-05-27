@@ -1,17 +1,24 @@
 // src/components/Hero.jsx
-import { useRef } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaWhatsapp,
+} from "react-icons/fa";
+import TypingEffect from "./TypingEffect";
 
 export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 }); // amount bisa diubah sesuai kebutuhan
-
+  
   return (
     <section
       id="hero"
       ref={ref}
-      className="text-center md:text-left mx-auto bg-sky-100 py-8 px-4"
+      className="text-center md:text-left mx-auto bg-sky-100 py-24 px-4"
     >
       <div className="max-w-5xl mx-auto">
         <motion.div
@@ -20,15 +27,14 @@ export default function Hero() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="py-10 text-5xl font-bold">
+          <div className="pt-10 pb-7 text-5xl font-bold">
             <span className="text-sky-500">Hi, I’m </span>Aryo
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold">
-            A Front-End Developer
-          </h2>
-          <h2 className="text-2xl md:text-3xl font-semibold">
-            based in Indonesia
-          </h2>
+          {/* Typing Effect */}
+          <div className="h-16">  
+           <TypingEffect />
+          </div>
+
           {/* Social Media Icons */}
           <div className="mt-8 flex justify-center lg:justify-start space-x-3">
             <a

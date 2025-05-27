@@ -37,7 +37,7 @@ export default function Skills() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <h3 className="text-3xl text-sky-500 font-semibold  text-gray-800 dark:text-white mb-12">
+        <h3 className="text-3xl text-sky-600 font-bold  text-gray-800 dark:text-white mb-12">
           Skills
         </h3>
 
