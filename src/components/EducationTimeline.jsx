@@ -15,7 +15,7 @@ const educationData = [
   },
   {
     year: "2022 - Sekarang",
-    school: "Universitas XYZ (Teknik Informatika)",
+    school: "Universitas Bina Sarana Informatika (Teknik Teknologi Informasi)",
   },
 ];
 
@@ -35,7 +35,9 @@ const EducationTimeline = () => {
             {/* Card */}
             <div className="ml-5 bg-white shadow-xl rounded-2xl p-5 w-96 transition hover:-translate-y-1 hover:shadow-2xl duration-300">
               <p className="text-sm text-gray-500 font-medium">{item.year}</p>
-              <h3 className="text-lg font-semibold text-gray-800 mt-1">{item.school}</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mt-1">
+                {item.school}
+              </h3>
             </div>
           </div>
         ))}
