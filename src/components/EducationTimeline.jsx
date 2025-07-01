@@ -22,20 +22,24 @@ const educationData = [
 const EducationTimeline = () => {
   return (
     <section className="max-w-4xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">
         Timeline Pendidikan
       </h2>
 
-      <div className="relative border-l-[3px] border-sky-400 pl-6 space-y-12">
+      <div className="relative border-l-2 border-sky-400 pl-6 space-y-10">
         {educationData.map((item, index) => (
           <div key={index} className="relative group">
             {/* Titik timeline */}
-            <div className="absolute w-4 h-4 bg-sky-500 rounded-full left-[-10px] top-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform"></div>
+            <div className="absolute w-3 h-3 bg-sky-500 rounded-full left-[-9px] top-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform duration-300"></div>
 
-            {/* Card */}
-            <div className="ml-5 bg-white shadow-xl rounded-2xl p-5 w-96 transition hover:-translate-y-1 hover:shadow-2xl duration-300">
-              <p className="text-sm text-gray-500 font-medium">{item.year}</p>
-              <h3 className="text-lg font-semibold text-gray-800 mt-1">{item.school}</h3>
+            {/* Card responsif */}
+            <div className="ml-4 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-5 max-w-md md:w-[450px] transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <p className="text-sm text-gray-500 dark:text-gray-300 font-medium">
+                {item.year}
+              </p>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mt-1">
+                {item.school}
+              </h3>
             </div>
           </div>
         ))}

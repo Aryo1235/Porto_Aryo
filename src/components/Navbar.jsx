@@ -20,12 +20,16 @@ const Navbar = () => {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  md:py-1${
-        isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-sky-500" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full  z-50 transition-all duration-300  md:py-1${
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-sky-500"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between mx-2 items-center">
-        <div className="text-2xl font-bold text-sky-600 tracking-wide">MyPortfolio</div>
+      <div className="max-w-xl md:max-w-7xl  px-6 py-4 flex justify-between mx-auto items-center">
+        <div className="text-2xl font-bold text-sky-600 tracking-wide">
+          MyPortfolio
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-800 font-medium font-sans tracking-wide">
